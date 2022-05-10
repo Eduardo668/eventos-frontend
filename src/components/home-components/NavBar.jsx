@@ -8,9 +8,11 @@ const NavBar = ()=>{
 
 
      const iconPositionResponsive = ()=>{
-          const width = document
-          if (width <= 663){
-              setPositionNavbar("left-[12rem]")
+         console.log("entrou")
+          let widthPage = window.screen.width  
+          if (widthPage <= 663){
+              console.log("yes")
+              setPositionNavbar("left-[9rem]")
           }
      }
     
@@ -28,7 +30,7 @@ const NavBar = ()=>{
                <Nav className="me-auto ">
                     <Nav.Link className={textColorNavBar} active >Home</Nav.Link>
                     <Nav.Link className={textColorNavBar}  href="#link"></Nav.Link>
-                    <NavDropdown color="dark" title="Eventos" id="basic-nav-dropdown">
+                    <NavDropdown variant="light" title="Eventos" id="basic-nav-dropdown">
                        <NavDropdown.Item href="#action/3.1">Lista de eventos</NavDropdown.Item>
                        <NavDropdown.Divider />
                        <NavDropdown.Item href="#action/3.2">Cadastrar Evento</NavDropdown.Item>
