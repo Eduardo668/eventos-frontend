@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, NavDropdown, Nav, Image,  } from "react-bootstrap";
 const NavBar = ()=>{
 
-     const textColorNavBar = "text-white"
-     const positionIconNavBar = "right-[4rem]"
+     const [textColorNavBar, setTextColorNavBar] = useState("text-white");
+     const [positionIconNavBar, setPositionNavbar] = useState("right-[4rem]");
+
+
      const iconPositionResponsive = ()=>{
           const width = document
           if (width <= 663){
-              positionIconNavBar = ""
+              setPositionNavbar("left-[12rem]")
           }
      }
     
@@ -26,7 +28,7 @@ const NavBar = ()=>{
                <Nav className="me-auto ">
                     <Nav.Link className={textColorNavBar} active >Home</Nav.Link>
                     <Nav.Link className={textColorNavBar}  href="#link"></Nav.Link>
-                    <NavDropdown className={textColorNavBar} title="Eventos" id="basic-nav-dropdown">
+                    <NavDropdown color="dark" title="Eventos" id="basic-nav-dropdown">
                        <NavDropdown.Item href="#action/3.1">Lista de eventos</NavDropdown.Item>
                        <NavDropdown.Divider />
                        <NavDropdown.Item href="#action/3.2">Cadastrar Evento</NavDropdown.Item>
