@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Container, NavDropdown, Nav, Image,  } from "react-bootstrap";
+import { Navbar, Container, NavDropdown, Nav, Image, DropdownButton,Dropdown  } from "react-bootstrap";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
 const NavBar = ()=>{
 
      const [textColorNavBar, setTextColorNavBar] = useState("text-white");
@@ -24,16 +25,20 @@ const NavBar = ()=>{
         <>
          <Navbar className=" bg-gray-900 " expand="lg">
             <Container>
-               <Navbar.Brand className={`relative ${positionIconNavBar} w-auto`} href="/"><Image fluid className="w-12" src="https://cdn-icons-png.flaticon.com/512/1683/1683712.png" rounded  ></Image> </Navbar.Brand>
+               <Navbar.Brand className={`relative ${positionIconNavBar} w-auto`}
+                href="/">
+                    <Image fluid className="w-12"
+                     src="https://cdn-icons-png.flaticon.com/512/1683/1683712.png"
+                      rounded 
+                     ></Image>
+                     </Navbar.Brand>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav">
                <Nav className="me-auto ">
                     <Nav.Link className={textColorNavBar} active >Home</Nav.Link>
                     <Nav.Link className={textColorNavBar}  href="#link"></Nav.Link>
-                    <NavDropdown variant="light" title="Eventos" id="basic-nav-dropdown">
-                       <NavDropdown.Item href="#action/3.1">Lista de eventos</NavDropdown.Item>
-                       <NavDropdown.Divider />
-                       <NavDropdown.Item href="#action/3.2">Cadastrar Evento</NavDropdown.Item>
+                    <NavDropdown className="border border-" variant="outline-secondary" title="Eventos" >
+                        <DropdownItem href="/Eventos" >Lista de eventos</DropdownItem>
                     </NavDropdown>
               </Nav>
     </Navbar.Collapse>
