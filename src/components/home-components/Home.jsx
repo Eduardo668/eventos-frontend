@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
-
+import Apresentation from "./Apresentation"
+import FooterH from "./FooterH";
 
 export default function Home(){
 
@@ -8,9 +9,10 @@ export default function Home(){
 
     return (
         
-        <div className={`${backgroundColorPage}`}>
+        <div className={`${backgroundColorPage} bg-backgroudHome1 bg-cover `}>
           <NavBar />
-          
+          <Apresentation />
+          <FooterH />
         </div>
         
         
