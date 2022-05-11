@@ -8,7 +8,7 @@ export default function Home(){
 
     return (
         
-        <div className={`${backgroundColorPage} h-screen bg-stone-700`}>
+        <div className={`${backgroundColorPage}`}>
           <NavBar />
           
         </div>

@@ -21,8 +21,11 @@ const NavBar = ()=>{
 
      const [marginBtnHome, setMarginBtnHome] = useState("");
      
+    
      const responsiveScripts = ()=>{
           let widthPage = window.screen.width  
+          let buttonDropdown = document.getElementById("dropdownMenuEvento")
+
           if (widthPage <= 663){
               setPositionNavbar("left-[9rem]")
           }
@@ -33,12 +36,26 @@ const NavBar = ()=>{
               setMarginBtnHome("mt-3")
               setMarginCadastrarBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
               setMarginLoginBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
+
+              buttonDropdown.addEventListener("focus", ()=>{
+                  setMarginCadastrarBtn("relative left-[9rem] bottom-[16.6rem] mt-3")
+                  setMarginLoginBtn("relative left-[9rem] bottom-[16.6rem] mt-3")
+              })
+              buttonDropdown.addEventListener("blur", ()=>{
+                setMarginCadastrarBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
+                setMarginLoginBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
+            })
+
+              
+
           }
+        
+          
 
    
 
      }
-
+     
      
      
 
@@ -68,7 +85,7 @@ const NavBar = ()=>{
                        </button>
                     </NavItem>
                     <NavItem className="dropdown ">
-                    <button  id="dropdownMenuEvento"
+                    <button id="dropdownMenuEvento"
                      data-bs-toggle="dropdown"
                      aria-expanded="false"
                       className={marginLeftBtn , marginEventosBtn +" text-white bg-dark" +
