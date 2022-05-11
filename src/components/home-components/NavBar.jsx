@@ -36,6 +36,11 @@ const NavBar = ()=>{
               setMarginBtnHome("mt-3")
               setMarginCadastrarBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
               setMarginLoginBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
+          
+        //  if (widthPage >= 1400){
+        //     setMarginCadastrarBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
+        //     setMarginLoginBtn("relative left-[12rem] bottom-[10.5rem] mt-3")
+        //  }
 
               buttonDropdown.addEventListener("focus", ()=>{
                   setMarginCadastrarBtn("relative left-[9rem] bottom-[16.6rem] mt-3")
@@ -44,13 +49,16 @@ const NavBar = ()=>{
               buttonDropdown.addEventListener("blur", ()=>{
                 setMarginCadastrarBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
                 setMarginLoginBtn("relative left-[9rem] bottom-[10.5rem] mt-3")
+                  
+                    
+
             })
 
               
 
           }
         
-          
+       
 
    
 
@@ -88,7 +96,7 @@ const NavBar = ()=>{
                     <button id="dropdownMenuEvento"
                      data-bs-toggle="dropdown"
                      aria-expanded="false"
-                      className={marginLeftBtn , marginEventosBtn +" text-white bg-dark" +
+                      className={marginLeftBtn + marginEventosBtn +" text-white bg-dark" +
                        " transition-all ease-in-out delay-150 h-10 p-2 rounded-[15px] w-[6.7rem]  " +
                        "hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300 dropdown-toggle"}>
                             Eventos 
