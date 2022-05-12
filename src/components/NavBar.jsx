@@ -72,7 +72,7 @@ const NavBar = ()=>{
 
     return (
         <>
-         <Navbar className="fixed w-full bg-gradient-to-r z-10 from-indigo-500 to-purple-900 " expand="lg">
+         <Navbar className="fixed w-full bg-gradient-to-r z-30 from-indigo-500 to-purple-900 " expand="lg">
             <Container>
                <Navbar.Brand className={`relative ${positionIconNavBar} w-auto`}
                 href="/home">
@@ -82,7 +82,7 @@ const NavBar = ()=>{
                      ></Image>
                      </Navbar.Brand>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-               <Navbar.Collapse  id="basic-navbar-nav">
+               <Navbar.Collapse className="z-30"  id="basic-navbar-nav">
                <Nav className={"me-auto "}>
                     <NavItem className={"mr-3 "+ marginBtnHome}>
                        <button onClick={()=>window.location.href = "/home"} className={"text-white bg-dark" +
@@ -102,7 +102,7 @@ const NavBar = ()=>{
                        </button>
                           <ul class="dropdown-menu mb-3" aria-labelledby="dropdownMenuEvento">
                              <li><a class="dropdown-item" href="/lista-eventos">Lista de eventos</a></li>
-                             <li><a class="dropdown-item" href="/cadastrar-eventos">Adicionar evento</a></li>
+                             <li><a class="dropdown-item" href="/add-evento">Adicionar evento</a></li>
                           </ul> 
                     </NavItem>
                     <NavItem className="mr-3">
