@@ -10,11 +10,10 @@ import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 const NavBar = ()=>{
 
-     const [textColorNavBar, setTextColorNavBar] = useState("text-cyan-500");
      const [positionIconNavBar, setPositionNavbar] = useState("right-[4rem]");
      
      const [marginLeftBtn, setMarginLeftBtn] = useState("ml-3")
-     const [marginEventosBtn, setMarginEventosBtn] = useState("")
+     const [marginEventosBtn, setMarginEventosBtn] = useState("mr-1")
 
      const [marginCadastrarBtn, setMarginCadastrarBtn] = useState("relative left-[39rem]");
      const [marginLoginBtn, setMarginLoginBtn] = useState("relative left-[40rem]");
@@ -73,10 +72,10 @@ const NavBar = ()=>{
 
     return (
         <>
-         <Navbar className=" bg-gradient-to-r from-indigo-500 to-purple-900 " expand="lg">
+         <Navbar className="fixed w-full bg-gradient-to-r z-10 from-indigo-500 to-purple-900 " expand="lg">
             <Container>
                <Navbar.Brand className={`relative ${positionIconNavBar} w-auto`}
-                href="/">
+                href="/home">
                     <Image fluid className="w-12"
                      src="https://cdn-icons-png.flaticon.com/512/1683/1683712.png"
                       rounded 
@@ -86,7 +85,7 @@ const NavBar = ()=>{
                <Navbar.Collapse  id="basic-navbar-nav">
                <Nav className={"me-auto "}>
                     <NavItem className={"mr-3 "+ marginBtnHome}>
-                       <button onClick={()=>window.location.href = "/"} className={"text-white bg-dark" +
+                       <button onClick={()=>window.location.href = "/home"} className={"text-white bg-dark" +
                        " transition-all ease-in-out delay-150  p-2 rounded-[15px] w-20 " +
                        "hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300"}>
                            Home
