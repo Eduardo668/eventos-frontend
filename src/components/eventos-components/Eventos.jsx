@@ -17,7 +17,7 @@ const Eventos = ()=>{
       const data = await response.json();
       setEventos(data);
    }
-   
+   let a = "g"
 
    useEffect(()=>{
       fetchListaDeEvento();
