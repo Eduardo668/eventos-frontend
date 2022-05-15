@@ -1,15 +1,13 @@
 import React from "react";
-import NavBar from "../NavBar";
-import FooterH from "../FooterH";
 import Formulario from "./Form";
 
 const AdicionarEvento = ()=>{
     return (
         <>
-        <div className={`overflow-x-hidden  h-screen bg-backgroundAddEvento  bg-cover `}>
-          <NavBar />
+        <div className={`overflow-x-hidden  h-screen bg-slate-400  bg-cover `}>
+          
             <Formulario />
-          <FooterH/>
+  
         </div>
         </>
     )
