@@ -15,7 +15,6 @@ const Formulario = ()=>{
      })
 
     const saveEvento =  (evento)=>{
-        evento.preventDefaut();
          fetch(API_URL_SAVE, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -63,6 +62,9 @@ const Formulario = ()=>{
                         <input id="inputEventDate" onChange={(e)=>{
                             setEvento(evento.dataEvento = e.target.value)
                         }} className="form-control w-[9rem]" type="file" accept="image/png, image/jpeg" />
+                    </div>
+                    <div className="mb-3 ml-5">
+                          <button className="btn btn-sucess" onClick={saveEvento(evento)}>Salvar</button>
                     </div>
                 </form>
            </div>
